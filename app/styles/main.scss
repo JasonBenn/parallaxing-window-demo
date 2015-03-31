@@ -1,0 +1,86 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+// endbower
+
+.parallax {
+  perspective: 300px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: perspective .5s;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  h1 {
+    margin-top: 5%;
+  }
+
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+
+.parallax__layer--slow {
+  // MATH PROBLEM: What is the relationship between $distance and screen height?
+  $distance: -100;
+  transform: translateZ($distance + px) scale((($distance * -1) / 300) + 1);
+}
+
+.iphone-video {
+  width: 400px;
+  height: 700px;
+  border-radius: 30px;
+  margin: auto auto;
+}
+
+.iphone {
+  width: 400px;
+  height: 700px;
+  border-radius: 30px;
+  border: 1px dashed black;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -350px;
+}
+
+.green {
+  background-color: green;
+  color: white;
+  font-size: 36px;
+  opacity: .5;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+  font-size: 36px;
+  opacity: .5;
+}
+
+.parallax.debug-on {
+
+  .parallax__group {
+    transform: translate3d(700px, 0, -800px) rotateY(30deg)
+  }
+}
