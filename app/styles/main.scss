@@ -14,7 +14,18 @@ $perspective: 300;
 
 .fixed-aperture {
   // clip-path: url('#svgTextPath');
-  clip-path: polygon(0 0, 0 100%, 250px 100%, 250px 250px, 750px 250px, 750px 750px, 250px 750px, 250px 100%, 100% 100%, 100% 0);
+  clip-path: polygon(
+    0 0, 
+    0 100%, 
+    250px 100%, 
+    250px 25vw, // _, top left height
+    750px 250px, // _, top right height
+    750px 30vw, // _, bottom right height
+    250px 750px,
+    250px 100%, 
+    100% 100%, 
+    100% 0
+  );
 }
 
 .tall {
