@@ -12,6 +12,28 @@ $perspective: 300;
   transition: perspective .5s;
 }
 
+.fixed-aperture {
+  clip-path: url('#svgTextPath');
+  // clip-path: polygon(0 0, 0 100%, 250px 100%, 250px 250px, 750px 250px, 750px 750px, 250px 750px, 250px 100%, 100% 100%, 100% 0);
+  /* Also can take single values to make all sides the same, or 2 values (vert/horz), or 3 values (top/horz/bottom). */
+}
+
+.tall {
+  height: 200px;
+  width: 100vw;
+  z-index: -1;
+}
+
+.whereami {
+  width: 500px;
+  height: 500px;
+}
+
+.absolute {
+  top: 0;
+  position: absolute;
+}
+
 .parallax__layer {
   position: absolute;
   top: 0;
@@ -60,24 +82,22 @@ $perspective: 300;
 }
 
 .green {
-  background-color: green;
+  background: linear-gradient(#498467 0%, #b2d3a8 100%);
   color: white;
   font-size: 36px;
-  opacity: .5;
 }
 
 .red {
-  background-color: red;
+  background: linear-gradient(#a30b37 0%, #bd6b73 100%);
   color: white;
   font-size: 36px;
   opacity: .5;
 }
 
 .blue {
-  background-color: blue;
+  background: linear-gradient(#3f7cac 0%, #dccfec 100%);
   color: white;
   font-size: 36px;
-  opacity: .5;
 }
 
 .parallax.debug-on {
