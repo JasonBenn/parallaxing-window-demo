@@ -39,13 +39,6 @@ $perspective: 300;
   transform: translateZ(0);
 }
 
-.parallax__layer--slow {
-  // MATH PROBLEM: What is the relationship between $distance and screen height?
-  $distance: -200;
-  transform: translateZ($distance + px) scale((($distance * -1) / $perspective) + 1);
-  // transform: translateZ($distance + px);
-}
-
 .iphone-video {
   width: 400px;
   height: 700px;
@@ -68,6 +61,13 @@ $perspective: 300;
 
 .green {
   background-color: green;
+  color: white;
+  font-size: 36px;
+  opacity: .5;
+}
+
+.red {
+  background-color: red;
   color: white;
   font-size: 36px;
   opacity: .5;
