@@ -13,13 +13,12 @@ $perspective: 300;
 }
 
 .fixed-aperture {
-  clip-path: url('#svgTextPath');
-  // clip-path: polygon(0 0, 0 100%, 250px 100%, 250px 250px, 750px 250px, 750px 750px, 250px 750px, 250px 100%, 100% 100%, 100% 0);
-  /* Also can take single values to make all sides the same, or 2 values (vert/horz), or 3 values (top/horz/bottom). */
+  // clip-path: url('#svgTextPath');
+  clip-path: polygon(0 0, 0 100%, 250px 100%, 250px 250px, 750px 250px, 750px 750px, 250px 750px, 250px 100%, 100% 100%, 100% 0);
 }
 
 .tall {
-  height: 200px;
+  height: 1000px;
   width: 100vw;
   z-index: -1;
 }
