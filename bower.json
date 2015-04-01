@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "panelsnap": "~0.14.0",
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "underscore": "~1.8.2"
   }
 }

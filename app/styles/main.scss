@@ -2,8 +2,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 // endbower
 
+$perspective: 300;
+
 .parallax {
-  perspective: 300px;
+  perspective: $perspective + px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -37,11 +39,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   transform: translateZ(0);
 }
 
-
 .parallax__layer--slow {
   // MATH PROBLEM: What is the relationship between $distance and screen height?
-  $distance: -100;
-  transform: translateZ($distance + px) scale((($distance * -1) / 300) + 1);
+  $distance: -200;
+  transform: translateZ($distance + px) scale((($distance * -1) / $perspective) + 1);
+  // transform: translateZ($distance + px);
 }
 
 .iphone-video {
